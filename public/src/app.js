@@ -328,7 +328,7 @@ if (document.readyState === 'loading') {
 	};
 
 	app.parseAndTranslate = function (template, data = {}) {
-        return new Promise((resolve, reject) => {
+		return new Promise((resolve, reject) => {
             require(['translator', 'benchpress'], function (translator, Benchpress) {
                 Benchpress.render(template, data)
                     .then(rendered => translator.translate(rendered))
